@@ -1,0 +1,8 @@
+[myrepo]
+
+name=My Repository
+
+baseurl=http://usalfd0spcmst01.corp.jabil.org/pub/CentOS/6/$basearch
+
+enabled=1
+
