@@ -50,7 +50,7 @@ class scom_agent::params {
   $scom_repo_file_source = 'puppet:///modules/scom_agent/scom.repo'
   $scom_repo_file_owner  = 'root'
   $scom_repo_file_group  = 'root'
-  $scom_repo_file_mode   = '0640'
+  $scom_repo_file_mode   = '0644'
 
 
 }
