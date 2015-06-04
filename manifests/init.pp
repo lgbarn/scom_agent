@@ -35,7 +35,24 @@
 #
 # Copyright 2015 Your name here, unless otherwise noted.
 #
-class scom_agent {
+class scom_agent (
+  $service_manage             = $scom_agent::params::service_manage,
+  $service_ensure             = $scom_agent::params::service_ensure,
+  $service_enable             = $scom_agent::params::service_enable,
+  $service_name               = $scom_agent::params::service_name,
+  $service_hasstatus          = $scom_agent::params::service_hasstatus,
+  $service_hasrestart         = $scom_agent::params::service_hasrestart,
+  $package_name               = $scom_agent::params::package_name,
+  $package_ensure             = $scom_agent::params::package_ensure,
+
+) inherits scom_agent::params {
+
+  contain scom_agent::install
+  contain scom_agent::config
+
+  Class['scom_agent::install'] ->
+  Class['scom_agent::config']
+
 
 
 }
