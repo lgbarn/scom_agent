@@ -45,5 +45,12 @@ class scom_agent::params {
   $service_hasrestart      = true
   $package_name            = 'scx'
   $package_ensure          = 'installed'
+  $scom_repo_file       = '/etc/yum.repos.d/scom.repo'
+  $scom_repo_file_ensure = file
+  $scom_repo_file_source = 'puppet:///modules/scom_agent/scom.repo'
+  $scom_repo_file_owner  = 'root'
+  $scom_repo_file_group  = 'root'
+  $scom_repo_file_mode   = '0640'
+
 
 }
