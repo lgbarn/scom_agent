@@ -35,6 +35,7 @@
 #
 # Copyright 2015 Your name here, unless otherwise noted.
 #
+
 class scom_agent (
   $service_manage             = $scom_agent::params::service_manage,
   $service_ensure             = $scom_agent::params::service_ensure,
@@ -52,7 +53,4 @@ class scom_agent (
 
   Class['scom_agent::install'] ->
   Class['scom_agent::config']
-
-
-
 }

@@ -37,19 +37,19 @@
 #
 class scom_agent::config inherits scom_agent {
 
-  #file { $scom_agent::params::scom_agent_cron_file:
-  #  ensure => $scom_agent::params::scom_agent_cron_file_ensure,
-  #  owner  => $scom_agent::params::scom_agent_cron_file_owner,
-  #  group  => $scom_agent::params::scom_agent_cron_file_group,
-  #  mode   => $scom_agent::params::scom_agent_cron_file_mode,
-  #  source => $scom_agent::params::scom_agent_cron_file_source,
-  #}
-  #file { $scom_agent::params::scom_agent_conf_file:
-  #  ensure => $scom_agent::params::scom_agent_conf_file_ensure,
-  #  owner  => $scom_agent::params::scom_agent_conf_file_owner,
-  #  group  => $scom_agent::params::scom_agent_conf_file_group,
-  #  mode   => $scom_agent::params::scom_agent_conf_file_mode,
-  #  source => $scom_agent::params::scom_agent_conf_file_source,
-  #}
+#  file { $scom_agent::params::scom_agent_cron_file:
+#    ensure => $scom_agent::params::scom_agent_cron_file_ensure,
+#    owner  => $scom_agent::params::scom_agent_cron_file_owner,
+#    group  => $scom_agent::params::scom_agent_cron_file_group,
+#    mode   => $scom_agent::params::scom_agent_cron_file_mode,
+#    source => $scom_agent::params::scom_agent_cron_file_source,
+#  }
+#  file { $scom_agent::params::scom_agent_conf_file:
+#    ensure => $scom_agent::params::scom_agent_conf_file_ensure,
+#    owner  => $scom_agent::params::scom_agent_conf_file_owner,
+#    group  => $scom_agent::params::scom_agent_conf_file_group,
+#    mode   => $scom_agent::params::scom_agent_conf_file_mode,
+#    source => $scom_agent::params::scom_agent_conf_file_source,
+#  }
 
 }

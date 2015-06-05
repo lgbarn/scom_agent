@@ -38,15 +38,15 @@
 class scom_agent::install inherits scom_agent {
 
   file { '/etc/yum.repos.d/scom.repo':
-    ensure => $scom_aagent::params::scom_repo_file_ensure,
-    source => $scom_aagent::params::scom_repo_file_source,
-    owner  => $scom_aagent::params::scom_repo_file_owner,
-    group  => $scom_aagent::params::scom_repo_file_group,
-    mode   => $scom_aagent::params::scom_repo_file_mode,
+    ensure => $scom_agent::params::scom_repo_file_ensure,
+    source => $scom_agent::params::scom_repo_file_source,
+    owner  => $scom_agent::params::scom_repo_file_owner,
+    group  => $scom_agent::params::scom_repo_file_group,
+    mode   => $scom_agent::params::scom_repo_file_mode,
+  }
 
-  package { $scom_agent::params::package_name:
+  package { "$scom_agent::params::package_name":
     ensure => $scom_agent::params::package_ensure,
-
   }
 
 }
