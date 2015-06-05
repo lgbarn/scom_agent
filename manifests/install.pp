@@ -45,7 +45,7 @@ class scom_agent::install inherits scom_agent {
     mode   => $scom_agent::params::scom_repo_file_mode,
   }
 
-  package { "$scom_agent::params::package_name":
+  package { $scom_agent::params::package_name:
     ensure => $scom_agent::params::package_ensure,
   }
 
