@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "author": "Luther Barnum",
   "summary": "This module installs and configures Microsoft SCOM agent to Linux server.",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "source": "https://github.com/lgbarn/scom_agent",
   "project_page": "https://github.com/lgbarn/scom_agent",
   "issues_url": "https://github.com/lgbarn/scom_agent/issues",
