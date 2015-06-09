@@ -58,5 +58,5 @@ All other distributions are not supported.
 
 ## Development
 
-This module is public and can be found on github[here](https://github.com/lgbarn/scom_agent)
+This module is public and can be found on github [here](https://github.com/lgbarn/scom_agent)
 
