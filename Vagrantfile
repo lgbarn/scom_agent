@@ -65,7 +65,10 @@ Vagrant.configure(2) do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
-    sudo yum install -y git
+    if [ -x $(which git) ]
+    then
+      sudo yum install -y git
+    fi
     if [ -d /tmp/scom_agent ]
     then
       sudo rm -rf /tmp/scom_agent
