@@ -12,7 +12,10 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "puppetlabs/centos-6.6-64-nocm"
+  config.vm.box = "puppetlabs/centos-5.11-32-nocm"
+#  config.vm.box = "puppetlabs/centos-5.11-64-nocm"
+#  config.vm.box = "puppetlabs/centos-6.6-32-nocm"
+#  config.vm.box = "puppetlabs/centos-6.6-64-nocm"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -73,8 +76,12 @@ Vagrant.configure(2) do |config|
     then
       sudo rm -rf /tmp/scom_agent
     fi
-    #sudo sh -c 'git clone https://github.com/lgbarn/scom_agent /tmp/scom_agent'
-    sudo sh -c 'git clone http://usalfd0putrep01.corp.jabil.org/jabil-puppet/scom_agent.git /tmp/scom_agent'
-    sudo sh -c 'cd /tmp/scom_agent;bash /tmp/scom_agent/scom_install.sh'
+    sudo sh -c 'mkdir /tmp/scom_agent'
+    sudo sh -c 'cd /tmp/scom_agent;wget http://usalfd0spcmst01/pub/scom_agent/scom_install_5_x86.sh'
+    sudo sh -c 'cd /tmp/scom_agent;wget http://usalfd0spcmst01/pub/scom_agent/scom_install.sh'
+    sudo sh -c 'cd /tmp/scom_agent;wget http://usalfd0spcmst01/pub/scom_agent/files/scom_5_x86.repo'
+    sudo sh -c 'cd /tmp/scom_agent;wget http://usalfd0spcmst01/pub/scom_agent/files/scom.repo'
+#    sudo sh -c 'cd /tmp/scom_agent;bash /tmp/scom_agent/scom_install.sh'
+    sudo sh -c 'cd /tmp/scom_agent;bash /tmp/scom_agent/scom_install_5_x86.sh'
   SHELL
 end
