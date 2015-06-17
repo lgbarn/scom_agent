@@ -77,10 +77,10 @@ Vagrant.configure(2) do |config|
       sudo rm -rf /tmp/scom_agent
     fi
     sudo sh -c 'mkdir /tmp/scom_agent'
-    sudo sh -c 'cd /tmp/scom_agent;wget http://usalfd0spcmst01/pub/scom_agent/scom_install_5_x86.sh'
-    sudo sh -c 'cd /tmp/scom_agent;wget http://usalfd0spcmst01/pub/scom_agent/scom_install.sh'
-    sudo sh -c 'cd /tmp/scom_agent;wget http://usalfd0spcmst01/pub/scom_agent/files/scom_5_x86.repo'
-    sudo sh -c 'cd /tmp/scom_agent;wget http://usalfd0spcmst01/pub/scom_agent/files/scom.repo'
+    sudo sh -c 'cd /tmp/scom_agent;wget http://usalfd0spcmst01.corp.jabil.org/pub/scom_agent/scom_install_5_x86.sh'
+    sudo sh -c 'cd /tmp/scom_agent;wget http://usalfd0spcmst01.corp.jabil.org/pub/scom_agent/scom_install.sh'
+    sudo sh -c 'cd /tmp/scom_agent;wget http://usalfd0spcmst01.corp.jabil.org/pub/scom_agent/files/scom_5_x86.repo'
+    sudo sh -c 'cd /tmp/scom_agent;wget http://usalfd0spcmst01.corp.jabil.org/pub/scom_agent/files/scom.repo'
 #    sudo sh -c 'cd /tmp/scom_agent;bash /tmp/scom_agent/scom_install.sh'
     sudo sh -c 'cd /tmp/scom_agent;bash /tmp/scom_agent/scom_install_5_x86.sh'
   SHELL
